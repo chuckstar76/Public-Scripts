@@ -2,5 +2,5 @@
 
 ## Update - May-2019
 
-Folder [Shell-Scripts](https://github.com/chuckstar76/Shared-Scripts/tree/master/Shell-Scripts): Examples of bash shell code
-Folder MacOS-Scripts: Examples of useful shell scripts for MacOS insight and understanding - particularly around TimeMachine 
+Folder [Shell-Scripts](https://github.com/chuckstar76/Shared-Scripts/tree/master/Shell-Scripts): Examples of bash shell code  
+Folder [MacOS-Scripts](): Examples of useful shell scripts for MacOS insight and understanding - particularly around TimeMachine   
