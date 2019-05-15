@@ -1,0 +1,7 @@
+# Updated - May-2019
+# Ignore local files and directories not to be committed to Dot Files and User Config private github repo
+
+# Ignore local directories
+/WIP
+
+# Ignore unimportant Dot Directories or Files
