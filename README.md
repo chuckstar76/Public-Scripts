@@ -1,1 +1,6 @@
 # Public repo for useful or re-usable scripts that are shared
+
+## Update - May-2019
+
+Folder Shell-Scripts: Examples of bash shell code
+Folder MacOS-Scripts: Examples of useful shell scripts for MacOS insight and understanding - particularly around TimeMachine 
