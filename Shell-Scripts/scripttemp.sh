@@ -39,20 +39,40 @@ t_undlin='\e[4m'
 t_blink='\e[5m'
 t_invert='\e[7m'
 
+### - Script Functions - ###
+# Access config file $CFG_FILE
+getCFG_FILE () {
+CFG_FILE=./${FILENAME}.cfg
+if [ -f "$CFG_FILE" ]; then
+    echo "Configuration Filename" - ${green}${t_bold}"$CFG_FILE exists"${t_reset}
+else
+    echo "Configuration Filename" - ${red}${t_bold}"$CFG_FILE does not exist"${t_reset}
+fi
+}
+# Access log file $LOG_FILE
+getLOG_FILE () {
+LOG_FILE=./${FILENAME}.log
+if [ -f "$LOG_FILE" ]; then
+    echo "Log Filename" - ${green}${t_bold}"$LOG_FILE exists"${t_reset}
+else
+    echo "Log Filename" - ${red}${t_bold}"$LOG_FILE does not exist"${t_reset}
+fi
+}
+
 ### - Start Configuration Ingestion - ###
 # Activities to complete
 # Use correct reserved variables
 # Access self filename $FILENAME
 FILENAME_BEF=${0##*/}
 FILENAME=${FILENAME_BEF%.sh}
-# Access config file $CFG_FILE
-CFG_FILE=${FILENAME}.cfg
-# Access log file $LOG_FILE
 
-echo \"${red}${t_bold}🗲Starting Script Name🗲${t_reset}\"
+### - Start Script - ###
+echo "${red}${t_bold}🗲Starting Script:${blue}${t_bold}$FILENAME${red}${t_bold}🗲${t_reset}"
 echo "Filename with path" - ${green}${t_bold}$0${t_reset}
 echo "Filename with path & without extension" - ${green}${t_bold}${0%.sh}${t_reset}
 echo "Filename without path" - ${green}${t_bold}${0##*/}${t_reset}
 echo "Filename without path & without extension" - ${green}${t_bold}$FILENAME${t_reset}
-echo "Configuration Filename" - ${green}${t_bold}$CFG_FILE${t_reset}
-echo \"${red}${t_bold}🏁Finished Daily Update🏁${t_reset}\" 
+# Call Functions
+getCFG_FILE 
+getLOG_FILE
+echo "${red}${t_bold}🏁Script:${blue}${t_bold}$FILENAME${red}${t_bold} Completed🏁${t_reset}" 
